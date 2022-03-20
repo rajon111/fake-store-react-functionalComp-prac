@@ -1,7 +1,7 @@
 import React from 'react';
 import './Menubar.css'
 
-const Menubar = () => {
+const Menubar = (props) => {
     return (
         <div>
             <div className="container">
@@ -13,7 +13,7 @@ const Menubar = () => {
                       
                             <li className='items me-4'>Home</li>
                             <li className='items me-4'>Contact</li>
-                            <li className='items me-4'>Cart</li> 
+                            <li className='items me-4'>Cart <sup>{props.count}</sup></li> 
                             <li className='items me-4'>login</li>
                         
                     </div>

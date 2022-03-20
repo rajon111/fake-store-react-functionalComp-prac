@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import SingleProduct from '../SingleProduct/SingleProduct';
 
-const AllProducts = () => {
+const AllProducts = (props) => {
+    const {cartIncrease} =props
     const[products,setproduct] = useState([])
 
     useEffect(()=>{
@@ -14,7 +15,7 @@ const AllProducts = () => {
             <h1>All Products:{products.length}</h1>
             <div className="row container">
             {
-                products.map(product => <SingleProduct key={product.id} product={product} ></SingleProduct>)
+                products.map(product => <SingleProduct key={product.id} product={product} cartIncrease={cartIncrease} ></SingleProduct>)
             }
             
             </div>
